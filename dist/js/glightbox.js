@@ -699,6 +699,10 @@
             return;
         }
 
+        if (type === 'HTML') {
+            slideMedia.appendChild(data.node.children[0].cloneNode(true));
+        }
+
         if (type === 'image') {
             var img = new Image();
             img.addEventListener('load', function () {
